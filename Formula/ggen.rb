@@ -5,21 +5,21 @@
 class Ggen < Formula
   desc "ggen is a simple CLI tool via Golang."
   homepage "https://github.com/Nabby12/ggen"
-  version "0.0.0"
+  version "0.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Nabby12/ggen/releases/download/v0.0.0/ggen_Darwin_x86_64.tar.gz"
-      sha256 "e7ac530a4b03c254022227d17c03def287f76f7fa9f8816a55698f8faff9118e"
+      url "https://github.com/Nabby12/ggen/releases/download/v0.0.1/ggen_Darwin_x86_64.tar.gz"
+      sha256 "9be4f07699608afbeae0d4950ad5b89149502282815ba27982ec0ada78af0b1a"
 
       def install
         bin.install "ggen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Nabby12/ggen/releases/download/v0.0.0/ggen_Darwin_arm64.tar.gz"
-      sha256 "96523c08c842a95d14afc0e40573eb1e35fdec999b4c6d56efe0ad2d10d680ee"
+      url "https://github.com/Nabby12/ggen/releases/download/v0.0.1/ggen_Darwin_arm64.tar.gz"
+      sha256 "e7c325d1e3237c4580dcb50df96f9f7bdb8d951fb1b16ef9ec253c8405382bd9"
 
       def install
         bin.install "ggen"
@@ -28,17 +28,17 @@ class Ggen < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Nabby12/ggen/releases/download/v0.0.0/ggen_Linux_arm64.tar.gz"
-      sha256 "4a0f84894767c1017fe692e2876d029f5a02380ff1da0af08522a1c3b383ab13"
+    if Hardware::CPU.intel?
+      url "https://github.com/Nabby12/ggen/releases/download/v0.0.1/ggen_Linux_x86_64.tar.gz"
+      sha256 "738939f3e54d531b142c5cae002d140f49bbfc437491f7866efa590aff096a24"
 
       def install
         bin.install "ggen"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Nabby12/ggen/releases/download/v0.0.0/ggen_Linux_x86_64.tar.gz"
-      sha256 "d8e2471a0f3f49b612b7c7627a0fb01956badf61951b86dc990327065b1c9269"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Nabby12/ggen/releases/download/v0.0.1/ggen_Linux_arm64.tar.gz"
+      sha256 "caa505fadf877b366bc731914c1657d38a3cf8ad65704f0d549ddedc10d11f5d"
 
       def install
         bin.install "ggen"
