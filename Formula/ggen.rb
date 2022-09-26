@@ -11,7 +11,7 @@ class Ggen < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Nabby12/ggen/releases/download/v0.0.0/ggen_Darwin_x86_64.tar.gz"
-      sha256 "307177543c5442329b8ed478f658c74b860b968596ea404855fe5c828e0ea1a4"
+      sha256 "e7ac530a4b03c254022227d17c03def287f76f7fa9f8816a55698f8faff9118e"
 
       def install
         bin.install "ggen"
@@ -19,7 +19,7 @@ class Ggen < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Nabby12/ggen/releases/download/v0.0.0/ggen_Darwin_arm64.tar.gz"
-      sha256 "86041099c56dbdd120b6d60b2cd6b18072467be41aefa4ca51850782ca1262b0"
+      sha256 "96523c08c842a95d14afc0e40573eb1e35fdec999b4c6d56efe0ad2d10d680ee"
 
       def install
         bin.install "ggen"
@@ -30,7 +30,7 @@ class Ggen < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Nabby12/ggen/releases/download/v0.0.0/ggen_Linux_arm64.tar.gz"
-      sha256 "d046aeb7624ee61d0ea4cc146d27001ba2819e0de1544dbdaae2f0e7c4d0d0cd"
+      sha256 "4a0f84894767c1017fe692e2876d029f5a02380ff1da0af08522a1c3b383ab13"
 
       def install
         bin.install "ggen"
@@ -38,7 +38,7 @@ class Ggen < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/Nabby12/ggen/releases/download/v0.0.0/ggen_Linux_x86_64.tar.gz"
-      sha256 "997a169364e962f9d99310214bba57403e877d7b78e7db1058c01a22be76df17"
+      sha256 "d8e2471a0f3f49b612b7c7627a0fb01956badf61951b86dc990327065b1c9269"
 
       def install
         bin.install "ggen"
